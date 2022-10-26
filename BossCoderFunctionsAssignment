@@ -1,0 +1,147 @@
+// BossCoderFunctionsAssignment.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+void printname(string name);
+void returnsum(int a, int b);
+int product(int a, int b);
+int factorial(int a);
+int oddfunctions(int a);
+float average(int a, int b, int c);
+int evensum(int a);
+void driverage(int age);
+int findpow(int x, int n);
+void fibonacci(int a);
+
+
+void printname(string name)
+{
+    cout<<name;
+}
+void returnsum(int a, int b)
+{
+    int sum;
+    sum = a + b;
+    cout <<"The sum of two numbers is: " << sum;
+}
+int product(int a, int b)
+{
+    int product;
+    product = a * b;
+    return product;
+}
+int factorial(int a)
+{
+    int fact = 1;
+    for (int i = 1; i <= a; i++)
+    {
+        fact *= i;
+    }
+    return fact;
+}
+int oddfunctions(int a)
+{
+    int sum=0;
+    cout << "The odd numbers to sum is: ";
+    cin >> a;
+    for (int i = 1; i <= a; i++) 
+    {
+        if (i % 2 != 0)
+            sum+=i;
+    }
+    return sum;
+}
+float average(int a, int b, int c)
+{
+    float avg=(a+b+c)/3;
+    return avg;
+}
+int evensum(int a)
+{
+    int sum = 0;
+    for (int i = 0; i <= a; i++)
+    {
+        if(i%2==0)
+        sum += i;
+    }
+    return sum;
+}
+void driverage(int age)
+{
+    if (age >= 18)
+        cout << "He/She is eligible to drive";
+    else
+        cout << "He/She is not eligible to drive";
+}
+int findpow(int x, int n)
+{
+    int pow=1;
+    for (int i = 1; i <= n; i++)
+    {
+        pow *= x;
+    }
+    return pow;
+}
+void fibonacci(int n)
+{
+    int first = 0, second =1,sum=0;
+    cout << first<<" ";
+    cout << second<<" ";
+    for (int i = 0; i <= n; i++)
+    {
+        sum = first+second;
+        cout<< sum<<" ";
+        first = second; second = sum;
+    }
+    
+}
+
+int main()
+{
+    //Write a funtion that prints a given name
+    string name = "Yamini";
+    printname(name);
+    cout << endl;
+    //Add two numbers and return the sum
+    int a, b;
+    cout << "Enter the values of a and b: "<<endl;
+    cout << "Value of a: ";
+    cin >> a;
+    cout << "Value of b: ";
+    cin >> b;
+    cout << endl;
+    returnsum(a,b);
+    cout << endl;
+    //To multiply two numbers and return the product
+    cout<<"The product of two numbers is: "<<product(a, b)<<endl;
+    //To find the factorial of a number
+    cout<<"The factorial of the number a is: " << factorial(a)<<endl;
+    //To print odd functions and do sum of it
+    int c = oddfunctions(a);
+    cout <<"The sum of odd numbers is: "<< c<<endl;
+    //Funtion to print average of three numbers
+    cout << "The average of three numbers is: " << average(a, b, c) << endl;
+    //Sum of even number from 1 to n
+    cout << "The sum of even numbers from 1 to n is: " << evensum(a) << endl;
+    //Eligibility to drive
+    driverage(c);
+    cout << endl;
+    //Find x^n
+    cout << "The power n of x is: " << findpow(a, b)<<endl;
+    //Fibonacci series
+    //cout << "The fibonacci series is: " << fibonacci(a);
+    fibonacci(a);
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

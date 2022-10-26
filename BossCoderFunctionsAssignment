@@ -14,6 +14,7 @@ int evensum(int a);
 void driverage(int age);
 int findpow(int x, int n);
 void fibonacci(int a);
+void swap(int x, int y);
 
 
 void printname(string name)
@@ -97,6 +98,15 @@ void fibonacci(int n)
     }
     
 }
+void swap(int x, int y)
+{
+    int temp;
+    temp = y;
+    y = x;
+    x = temp;
+    cout << "hey" << x << "," << y<<endl;
+    //return 0;
+}
 
 int main()
 {
@@ -133,6 +143,10 @@ int main()
     //Fibonacci series
     //cout << "The fibonacci series is: " << fibonacci(a);
     fibonacci(a);
+    cout << endl;
+    //Passing arguments by value 
+    swap(a, b);
+    cout << a << "," << b;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
